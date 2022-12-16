@@ -1,0 +1,80 @@
+@import "../variables";
+
+.hero {
+
+  @media (min-width: 992px) {
+    padding-top: rem(50);
+  }
+
+  &__title {
+    font-family: $font-family-rubik;
+    font-size: rem(20);
+    letter-spacing: 0.04em;
+    line-height: 122.6%;
+    color: #195b84;
+    margin: 0;
+    padding: 0 0 rem(40);
+
+    @media (min-width: 375px) {
+      font-size: rem(24);
+    }
+
+    @media (min-width: 576px) {
+      font-size: rem(30);
+    }
+
+    @media (min-width: 992px) {
+      font-size: rem(44);
+      padding: rem(40) 0 !important;
+    }
+
+    span {
+      background: #fff;
+      display: inline-block;
+      padding: 0 13px;
+      position: relative;
+      margin-left: -13px;
+    }
+
+    strong {
+      color: $brand-secondary;
+      position: relative;
+
+      @media (min-width: 1200px) {
+        &::after {
+          content: url(../img/icons/vector-line.svg);
+          position: absolute;
+          right: -70px;
+          top: 100%;
+          margin-top: -25px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    max-width: 380px;
+  }
+
+  &__left {
+    flex: 0 0 100%;
+
+    @media (min-width: 992px) {
+      flex: 0 0 65%;
+    }
+  }
+
+  &__right {
+    display: none;
+
+    @media (min-width: 992px) {
+      flex: 0 0 35%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .container {
+    display: flex;
+  }
+}

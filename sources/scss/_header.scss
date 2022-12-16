@@ -1,2 +1,17 @@
 @import "variables";
 
+.header {
+  padding: rem(30) 0;
+
+  .logo {
+    @media (max-width: 576px) {
+      width: 100px;
+    }
+  }
+
+  .btn {
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+}

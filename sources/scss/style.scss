@@ -20,10 +20,12 @@
 @import "header";
 @import "general";
 @import "footer";
+@import "buttons";
+@import "form";
 
 
 // Blocks
-@import "blocks/testimonial";
+@import "blocks/hero";
+@import "blocks/benefits";
+@import "blocks/start";
 
-// Elements
-@import "elements/testim";

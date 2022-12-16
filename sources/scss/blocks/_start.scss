@@ -1,0 +1,129 @@
+.start {
+  padding-bottom: 25px;
+
+  @media (min-width: 992px) {
+    padding-top: 88px;
+    padding-bottom: 145px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: rem(22);
+    letter-spacing: 0.04em;
+    line-height: 122.6%;
+    font-weight: 700;
+    font-family: $font-family-rubik;
+    color: #195b84;
+    max-width: 450px;
+    margin: 0 auto 30px;
+
+    @media (min-width: 576px) {
+      font-size: rem(28);
+    }
+
+    @media (min-width: 992px) {
+      max-width: 687px;
+      margin: 0 auto 95px;
+      font-size: rem(36);
+    }
+  }
+
+  &__inner {
+    @media (min-width: 992px) {
+      display: flex;
+      gap: 40px;
+    }
+
+    @media (min-width: 1200px) {
+      gap: 0;
+    }
+  }
+
+  &__img {
+    flex: 0 0 358px;
+    padding: 0 30px;
+    display: none;
+
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__info {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    flex: 1 0 390px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 0; 
+
+      &:first-child {
+        .start__item {
+          &::after {
+            right: 0;
+          }
+        }
+      }
+  
+      &:last-child {
+        .start__item {
+          &::after {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    background: #F4F9FF;
+    box-shadow: 5px 5px 20px rgba(0, 85, 112, 0.15);
+    border-radius: 5px;
+    padding: rem(24) rem(20);
+    font-size: rem(16);
+    line-height: 122.6%;
+    letter-spacing: 0.04em;
+    color: #195b84;
+    position: relative;
+    min-height: 180px;
+
+    br {
+      display: none;
+    }
+
+    @media (min-width: 576px) {
+      padding: rem(24) rem(20) rem(10);
+      font-size: rem(18);
+
+      br {
+        display: block;
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background-color: $brand-secondary;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &-title {
+      color: $brand-secondary;
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: 122.6%;
+      font-family: $font-family-open-sans;
+      margin-bottom: rem(20);
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
