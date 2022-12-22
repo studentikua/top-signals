@@ -17,9 +17,10 @@
   }
 
   &__item {
-    padding: 35px 15px;
+    padding: 35px 10px;
     text-align: center;
     position: relative;
+    z-index: 1;
 
     @media (min-width: 992px) {
       flex: 0 0 20%;
@@ -27,7 +28,21 @@
     }
 
     &::before {
-      // content: ;
+      content: attr(data-bg);
+      color: #f6f6f6;
+      opacity: .8;
+      font-family: $font-family-rubik;
+      font-size: 144px;
+      position: absolute;
+      font-weight: 700;
+      line-height: 1;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+
+      @media (min-width: 992px) {
+        bottom: auto;
+      }
     }
 
     &:not(:last-child) {
